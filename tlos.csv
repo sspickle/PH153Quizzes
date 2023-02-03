@@ -1,0 +1,21 @@
+TLO-1,TLO-1,Use the momentum principle to compute the future motion of a system given its current state.,Avg. of 3 Highest
+TLO-2,TLO-2,Use the momentum principle to infer forces acting on a system given its current motion.,Avg. of 3 Highest
+TLO-3,TLO-3,Draw and label free body diagrams.,Avg. of 3 Highest
+TLO-4,TLO-4,Compute forces directly due to fundamental interactions.,Avg. of 3 Highest
+TLO-5,TLO-5,Compute forces arising from contact interactions.,Avg. of 3 Highest
+TLO-6,TLO-6,Relate concepts between microscopic and macroscopic perspectives.,Avg. of 3 Highest
+TLO-7,TLO-7,"Describe curving motion in terms of the rates of change of velocity, position, and momentum.",Avg. of 3 Highest
+TLO-8,TLO-8,Compute the change of a system's energy based on the system's initial and final state.,Avg. of 3 Highest
+TLO-9,TLO-9,Compute the Work done on a system by a force or the energy transferred between a system and the surroundings.,Avg. of 3 Highest
+TLO-10,TLO-10,"Use the Energy Principle to make inferences about the initial state, final state, work done, or energy transferred between a system and the surroundings.",Avg. of 3 Highest
+TLO-11,TLO-11,"Apply the Energy Principle in situations where multiple forms of energy (e.g., rotational, vibrational, etc.) are important.",Avg. of 3 Highest
+TLO-12,TLO-12,Use the angular momentum principle to compute the future motion of a system given its current state.,Avg. of 3 Highest
+TLO-13,TLO-13,Compute the number of microstates available to a system given the energy distribution among sub-systems.,Avg. of 3 Highest
+TLO-14,TLO-14,Apply the Energy Principle in situations where the energy is quantized.,Avg. of 3 Highest
+CLO-1,CLO-1,Write a computer program to compute the future motion of a system given the forces of interaction,Avg. of 3 Highest
+CLO-2,CLO-2,Write a computer program to compute the number of micro states available to a system given the distribution of energy among sub-systems.,Highest
+ELO-1,ELO-1,Estimate the parameters of a model based on data collected in an experiment.,Avg. of 3 Highest
+ELO-2,ELO-2,Compare the measured motion of a system to the prediction of the momentum principle. ,Avg. of 3 Highest
+ELO-3,ELO-3,Compare the measured static and dynamic spring stiffnesses of a spring.,Highest
+ELO-4,ELO-4,Estimate the drag coefficient of a falling object.,Highest
+ELO-5,ELO-5,Compare the measured behavior of a system to the prediction of the energy principle. ,Avg. of 3 Highest
