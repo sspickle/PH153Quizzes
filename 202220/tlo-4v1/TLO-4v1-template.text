@@ -1,0 +1,53 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+A planet of mass $\VAR{data.mp}$ is at location $\VAR{data.rp}$. A star of mass $\VAR{data.ms}$ is at location $\VAR{data.rs}$. Compute the force on the planet due to the star. First find the relative position vector from the star to the planet $\vec{r}_{s\rightarrow p}$. Then find the unit vector in this direction, $\hat{r}_{s\rightarrow p}$. Next, use Newton's law of gravitation to compute the magnitude of the force on the planet, and then combine these results to compute the force of the star on the planet. Show your work.
+
+%% if ans
+
+Solution: 
+
+\begin{eqnarray*}
+\vec{r}_{s\rightarrow p} &=& \vec{r}_p - \vec{r}_s\\
+& = & (\VAR{data.rp}) - (\VAR{data.rs}) = \VAR{data.rsp}\\
+|\vec{r}_{s\rightarrow p}| &=& |\VAR{data.rsp}| = \VAR{data.rspmag}\\
+\hat{r}_{s\rightarrow p} &=& \vec{r}_{s\rightarrow p}/|\vec{r}_{s\rightarrow p}| = \VAR{data.rsphat}\\
+F_{\rm mag}& = & G \frac{m_s m_p}{|\vec{r}_{s\rightarrow p}|^2} = (\VAR{data.G})\frac{(\VAR{data.ms})(\VAR{data.mp})}{(\VAR{data.rspmag})^2} = \VAR{data.Fmag}\\
+F & = & - F_{\rm mag} \hat{r}_{s\rightarrow p} = -(\VAR{data.Fmag})(\VAR{data.rsphat})\\
+  & = & \VAR{data.F}
+\end{eqnarray*}
+
+%% endif
+
+\end{flushleft}
+\end{noindent}
+\end{document}

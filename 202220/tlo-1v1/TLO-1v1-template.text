@@ -18,30 +18,28 @@
 \begin{flushleft}
 
 %% if ans 
-\VAR{data.tlo}-(\VAR{data.vnum}) Solution.
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
 
 \vspace{0 pt}
 
 %% else
 
-\VAR{data.tlo}-(\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+\VAR{data.tlo}-(\VAR{version-data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
 
 \hfill  Date $\rule{4cm}{0.15mm}$
 
 %% endif
 
-A truck driver slams on the brakes and the momentum of the truck changes from $\VAR{data.p_i}$ to $\VAR{data.p_f}$ in $\VAR{data.dt}$ due to a net constant force primarily produced by the road acting on the wheels of truck. Note that we don't need to know the detailed mechanism that produces this force to compute its value. Calculate the net force exerted on the truck as a vector. Start with a fundamental principle. Show your work.
+An object of mass $\VAR{data.m}$ has a momentum $\VAR{data.p}$. At this instant the object is acted on by a force $\VAR{data.F}$ for $\VAR{data.t_ms}$ ($\VAR{data.t}$) What is the momentum of the object at the end of this time interval? Start with a fundamental principle. Show all your work.
 
 %% if ans
 
-Solution: The system is the truck. The surroundings are the road (and the Earth). The momentum principle demands:
+Solution: Use the momentum principle:
 
 \begin{eqnarray*}
 \Delta \vec{p} & = & \vec{F}_{\rm net} \cdot \Delta t \\
-\vec{p}_f - \vec{p}_i & = & \vec{F}_{\rm net} \cdot \Delta t \\
-\vec{F}_{\rm net} & = & \frac{\vec{p}_f - \vec{p}_i}{\Delta t} \\
-\vec{F}_{\rm net} & = & \frac{\VAR{data.p_f} - \VAR{data.p_i}}{\VAR{data.dt}} \\
-\vec{F}_{\rm net} & = & \VAR{data.F} 
+& = & (\VAR{data.F})(\VAR{data.t_ms}) = (\VAR{data.F})(\VAR{data.t}) = \VAR{data.dp}\\
+\vec{p_f} & = & \vec{p}_i + \Delta \vec{p} = \VAR{data.p} + \VAR{data.dp} = \VAR{data.pf}
 \end{eqnarray*}
 
 %% endif

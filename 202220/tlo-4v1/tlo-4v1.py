@@ -22,7 +22,7 @@ used to create the problem/solution pairs.
 
 """
 
-tlo='TLO-1v2'
+tlo='TLO-4v1'
 templateFile = tlo + '-template.text' # tex template
 quizFilenameTemplate = tlo + '-{:}.tex'
 quizSolnFilenameTemplate = tlo + '-soln-{:}.tex'
@@ -45,33 +45,33 @@ def getTemplateValues(numSamples, seeds, extra=0):
         newAns = dict(dummy='dummy')
         answers.append(newAns)
         
-        m = random.randint(3,8)/10
-        newData.update(m=latex_float(m,"kg"))
-        
-        p = vp.vec(random.randint(1,5),random.randint(6,12),random.randint(3,9))
-        
-        newData.update(p=latex_vec(p,"kg.m/s"))
-        Fx = random.choice(range(-80,85,5))
-        Fy = random.choice(range(-80,85,5))
-        Fz = random.choice(range(-80,85,5))
-        
-        
-        
-        F = vp.vec(Fx,Fy,Fz)
-        newData.update(F=latex_vec(F,"N"))
-        
-        t_ms = random.randint(2,7)
-        t = t_ms/1000
-        
-        newData.update(t_ms=latex_float(t_ms,"ms"))
-        newData.update(t=latex_float(t,"s"))
-        
-        dp = F*t
-        pf = p + dp
-        newData.update(dp=latex_vec(dp,"kg.m/s"))
-        newData.update(pf=latex_vec(pf,"kg.m/s"))
+        mp = random.randint(1,5)*1e24
+        ms = random.randint(3,9)*1e30
 
-        
+        while True:
+            rp = vp.vec(random.randint(-5,5),random.randint(-5,5),0)*1e11
+            rs = vp.vec(random.randint(-5,5),random.randint(-5,5),0)*1e11
+            if vp.mag(rp-rs) > 3e11:
+                break
+
+        rsp = rp-rs
+        rspmag = vp.mag(rsp)
+        rsphat = vp.hat(rsp)
+        G = 6.67e-11
+
+        Fmag = G*mp*ms/(rspmag**2)
+        F = -Fmag*rsphat
+
+        newData.update(G=latex_float(G,"N m^2/kg^2"))
+        newData.update(mp=latex_float(mp,"kg"))
+        newData.update(ms=latex_float(ms,"kg"))
+        newData.update(rp=latex_vec(rp,"m"))
+        newData.update(rs=latex_vec(rs,"m"))
+        newData.update(rsp=latex_vec(rsp,"m"))
+        newData.update(rspmag=latex_float(rspmag,"m"))
+        newData.update(rsphat=latex_vec(rsphat,""))
+        newData.update(Fmag=latex_float(Fmag,"N"))
+        newData.update(F=latex_vec(F,"N"))
         
     promptData = {'data': data}
     promptDataSet = TeXData('prompt', quizFilenameTemplate, promptData )

@@ -45,16 +45,33 @@ def getTemplateValues(numSamples, seeds, extra=0):
         newAns = dict(dummy='dummy')
         answers.append(newAns)
         
-        p_i = vp.vec(random.randint(9,12)*1e4,0,0)
-        p_f = vp.vec(random.randint(2,5)*1e4,0,0)
-        dt = random.randint(3,7)
-        dp = p_f - p_i
-        F = dp/dt
-        newData.update(p_i=latex_vec(p_i,"kg.m/s"))
-        newData.update(p_f=latex_vec(p_f,"kg.m/s"))
-        newData.update(dt=latex_float(dt,"s"))
-        newData.update(dp=latex_vec(dp,"kg.m/s"))
+        m = random.randint(3,8)/10
+        newData.update(m=latex_float(m,"kg"))
+        
+        p = vp.vec(random.randint(1,5),random.randint(6,12),random.randint(3,9))
+        
+        newData.update(p=latex_vec(p,"kg.m/s"))
+        Fx = random.choice(range(-80,85,5))
+        Fy = random.choice(range(-80,85,5))
+        Fz = random.choice(range(-80,85,5))
+        
+        
+        
+        F = vp.vec(Fx,Fy,Fz)
         newData.update(F=latex_vec(F,"N"))
+        
+        t_ms = random.randint(2,7)
+        t = t_ms/1000
+        
+        newData.update(t_ms=latex_float(t_ms,"ms"))
+        newData.update(t=latex_float(t,"s"))
+        
+        dp = F*t
+        pf = p + dp
+        newData.update(dp=latex_vec(dp,"kg.m/s"))
+        newData.update(pf=latex_vec(pf,"kg.m/s"))
+
+        
         
     promptData = {'data': data}
     promptDataSet = TeXData('prompt', quizFilenameTemplate, promptData )
