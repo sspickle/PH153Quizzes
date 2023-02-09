@@ -1,0 +1,51 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+A truck driver slams on the brakes and the momentum of the truck changes from $\VAR{data.p_i}$ to $\VAR{data.p_f}$ in $\VAR{data.dt}$ due to a net constant force primarily produced by the road acting on the wheels of truck. Note that we don't need to know the detailed mechanism that produces this force to compute its value. Calculate the net force exerted on the truck as a vector. Start with a fundamental principle. Show your work.
+
+%% if ans
+
+Solution: The system is the truck. The surroundings are the road (and the Earth). The momentum principle demands:
+
+\begin{eqnarray*}
+\Delta \vec{p} & = & \vec{F}_{\rm net} \cdot \Delta t \\
+\vec{p}_f - \vec{p}_i & = & \vec{F}_{\rm net} \cdot \Delta t \\
+\vec{F}_{\rm net} & = & \frac{\vec{p}_f - \vec{p}_i}{\Delta t} \\
+\vec{F}_{\rm net} & = & \frac{\VAR{data.p_f} - \VAR{data.p_i}}{\VAR{data.dt}} \\
+\vec{F}_{\rm net} & = & \VAR{data.F} 
+\end{eqnarray*}
+
+%% endif
+
+\end{flushleft}
+\end{noindent}
+\end{document}
