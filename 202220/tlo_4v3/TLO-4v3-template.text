@@ -1,0 +1,71 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+At a certain time a star of mass $\VAR{data.ms}$ is located at $\VAR{data.rs}$. A planet of mass $\VAR{data.mp}$ is located at $\VAR{data.rp}$ and is moving with a velocity of $\VAR{data.vpl}$.
+
+\vspace{11 pt}
+
+(a) TLO-4: What is the vector force acting on the planet by the star?
+
+%% if ans
+
+\begin{eqnarray*}
+    \vec{r}_{s\rightarrow p} &=& \vec{r}_p - \vec{r}_s\\
+    & = & (\VAR{data.rp}) - (\VAR{data.rs})\\
+    & = & \VAR{data.rsp}\\
+    |\vec{r}_{s\rightarrow p}| &=& |\VAR{data.rsp}| = \VAR{data.rspmag}\\
+    \hat{r}_{s\rightarrow p} &=& \vec{r}_{s\rightarrow p}/|\vec{r}_{s\rightarrow p}| = \VAR{data.rsphat}\\
+    F_{\rm mag}& = & G \frac{m_s m_p}{|\vec{r}_{s\rightarrow p}|^2} = (\VAR{data.G})\frac{(\VAR{data.ms})(\VAR{data.mp})}{(\VAR{data.rspmag})^2} = \VAR{data.Fmag}\\
+    F & = & - F_{\rm mag} \hat{r}_{s\rightarrow p} = -(\VAR{data.Fmag})(\VAR{data.rsphat})\\
+      & = & \VAR{data.F}
+\end{eqnarray*}
+  
+%% else
+  
+  \vspace{2 in}
+  
+%% endif
+
+(b) TLO-1: At a time $\VAR{data.t}$ seconds later, what is the new velocity of the planet? Show your work clearly. Start with a fundamental principle.
+
+%% if ans
+
+\begin{eqnarray*}
+    dp & = & \vec{F}\cdot \Delta t = (\VAR{data.F})(\VAR{data.t}) = \VAR{data.dp}\\
+    v_f & = & v_i + dp/m = \VAR{data.vpl} + (\VAR{data.dp})/(\VAR{data.mp})\\
+    & =  & \VAR{data.vf}
+\end{eqnarray*}
+%% endif
+
+\end{flushleft}
+\end{noindent}
+\end{document}

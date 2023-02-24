@@ -1,0 +1,100 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+A star wanders near another star. There are no other objects near enough to have significant effects on the motion of the two stars. At time $t$ = $\VAR{data.t1}$ the situation is this:
+
+\vspace{11 pt}
+\vspace{11 pt}
+\begin{tabbing}
+Star 1 \= mass = $\VAR{data.m1}$\\
+	
+\>position = $\VAR{data.r1}$\\
+	
+\>momentum = $\VAR{data.p1}$\\
+	
+Star 2 mass = $\VAR{data.m2}$\\
+
+\>position = $\VAR{data.r2}$\\
+	
+\>momentum = $\VAR{data.p2}$\\
+\end{tabbing}
+
+\vspace{11 pt}
+(a) TLO-4: What is the vector force of star 2 acting on star 1?
+	
+%% if ans
+
+\begin{eqnarray*}
+  \vec{r}_{2\rightarrow 1} &=& \vec{r}_1 - \vec{r}_2\\
+  & = & (\VAR{data.r1}) - (\VAR{data.r2})\\
+  & = & \VAR{data.r12}\\
+  |\vec{r}_{2\rightarrow 1}| &=& |\VAR{data.r12}| = \VAR{data.r12mag}\\
+  \hat{r}_{2\rightarrow 1} &=& \vec{r}_{2\rightarrow 1}/|\vec{r}_{2\rightarrow 1}| = \VAR{data.r12hat}\\
+  F_{\rm mag}& = & G \frac{m_1 m_2}{|\vec{r}_{2\rightarrow 1}|^2} = (\VAR{data.G})\frac{(\VAR{data.m1})(\VAR{data.m2})}{(\VAR{data.r12mag})^2} = \VAR{data.Fmag}\\
+  F & = & - F_{\rm mag} \hat{r}_{2\rightarrow 1} = -(\VAR{data.Fmag})(\VAR{data.r12hat})\\
+    & = & \VAR{data.F}
+  \end{eqnarray*}
+
+%% else
+
+\vspace{2 in}
+
+%% endif
+
+(b) TLO-1: At time $t$ = $\VAR{data.t2}$, what is the approximate momentum of star 1?
+%% if ans
+
+\begin{eqnarray*}
+  dp & = & \vec{F}\cdot (t_2 - t_1) = \VAR{data.dp}\\
+  p_f & = & p_i + dp = \VAR{data.p1} + \VAR{data.dp}\\
+  & =  & \VAR{data.p1f}
+\end{eqnarray*}
+
+%% else
+
+\vspace{2 in}
+
+%% endif
+
+(c) TLO-1: At time $t$ = $\VAR{data.t2}$, what is the approximate position of star 1?
+
+%% if ans
+
+\begin{eqnarray*}
+r_f & = & r_i + p_f*(t_2 - t_1)/m_1 = \VAR{data.r1f}
+\end{eqnarray*}
+
+%% endif
+
+\end{flushleft}
+\end{noindent}
+\end{document}

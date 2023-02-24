@@ -1,0 +1,82 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+As shown in the diagram below (not to scale), a block of mass $\VAR{data.m}$ is suspended motionless from a wire, with a compressed spring pushing it away from the wall. Use $\VAR{data.theta_deg}$ as the value of $\theta$ even though it may not appear to be this value in the diagram.
+
+%% if ans
+
+\includegraphics[width=2in]{figs/hangingweight1_FBD.png}
+
+%% else
+
+\includegraphics[width=2in]{figs/05-030_hangingweight1.png}
+
+%% endif
+
+TLO-3: Draw a free body diagram (FBD) for the block. Be sure to label all forces showing the source of the force (e.g., $\vec{F}_{\rm wire \rightarrow block}$, and so on). Also be sure to draw all vectors with the tail at the point of application of the force. 
+
+%% if ans 
+
+(See the solution FBD above)
+
+%% endif
+
+%% if not ans
+
+\vspace{2 in}
+
+%% endif
+
+TLO-2: Determine the force acting on the block by the spring. Start with a fundamental principle.
+
+%% if ans
+
+\begin{eqnarray*}
+    \frac{d\vec{p}}{dt} &=& \vec{F}_{\rm net} = \vec{F}_w + \vec{F}_s + \vec{F}_E\\
+    0 & = & \vec{F}_w + \vec{F}_s + \vec{F}_E\\
+    x: 0 & = & F_w \cos(\theta) - F_s + 0\\
+    y: 0 & = & F_w \cos(90 - \theta) + 0 - mg\\
+    F_s  & = & F_w \cos(\theta)\\
+    mg & = & F_w \cos(90 - \theta)\\
+    F_s & = & mg \cot(\theta)\\
+    & = & (\VAR{data.m})(\VAR{data.g}) (\VAR{data.cottheta}) = \VAR{data.Fs}
+\end{eqnarray*}
+
+%% else
+
+\vspace{2 in}
+
+%% endif
+
+\end{flushleft}
+\end{noindent}
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+At a certain instant, a particle is moving in the $\VAR{data.dir}$ direction with momentum $\VAR{data.pmag}$. During the next $\VAR{data.dt}$, a constant force acts on the particle: $F\sb{x} = \VAR{data.Fvec.x}$ N, and $F\sb{y} = \VAR{data.Fvec.y}$ N. What is the magnitude of the momentum of the particle at the end of this $\VAR{data.dt}$ interval? Start with a fundamental principle of physics. Show your work.
+
+%% if ans
+
+Solution: Use the momentum principle:
+
+\begin{eqnarray*}
+\Delta \vec{p} & = & \vec{F}_{\rm net} \cdot \Delta t \\
+& = & (\VAR{data.Fvec})(\VAR{data.dt}) = \VAR{data.dp}\\
+\vec{p_f} & = & \vec{p}_i + \Delta \vec{p} = \VAR{data.p} + \VAR{data.dp} = \VAR{data.pnew}\\
+p_f & = & \sqrt{(\VAR{data.pnewx})^2 + (\VAR{data.pnewy})^2 + (\VAR{data.pnewz})^2} = \VAR{data.pmagnew}
+\end{eqnarray*}
+
+%% endif
+
+\end{flushleft}
+\end{noindent}
+\end{document}

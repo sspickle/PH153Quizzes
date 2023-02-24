@@ -1,0 +1,49 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+The density of \VAR{data.element} is $\VAR{data.density_gpcc} (\VAR{data.density_kgm3})$. Find the approximate radius of a \VAR{data.element} atom in a block of \VAR{data.element}. \VAR{data.element} has an atomic mass of $\VAR{data.mpermole} (\VAR{data.ma})$. Show your work.
+
+%% if ans
+
+\begin{eqnarray*}
+    \rho & = & \frac{m_{\rm atom}}{V_{\rm atom}} \approx  \frac{m_{\rm atom}}{d^3}\\
+    d & = & \left(\frac{m_{\rm atom}}{\rho}\right)^{1/3}\\
+        & = & \left(\frac{\VAR{data.ma}}{\VAR{data.density_kgm3}}\right)^{1/3}\\
+        & = & \VAR{data.d}\\
+    r & = & d/2 \approx \VAR{data.r}
+\end{eqnarray*}
+
+%% endif
+
+\end{flushleft}
+\end{noindent}
+\end{document}

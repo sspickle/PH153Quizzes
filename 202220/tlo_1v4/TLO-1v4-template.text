@@ -24,13 +24,14 @@
 
 %% else
 
-\VAR{data.tlo}-(\VAR{version-data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
 
 \hfill  Date $\rule{4cm}{0.15mm}$
 
 %% endif
 
-An object of mass $\VAR{data.m}$ has a momentum $\VAR{data.p}$. At this instant the object is acted on by a force $\VAR{data.F}$ for $\VAR{data.t_ms}$ ($\VAR{data.t}$) What is the momentum of the object at the end of this time interval? Start with a fundamental principle. Show all your work.
+A billiard ball on a billiards table has a momentum $\VAR{data.p}$. When a stick strikes the ball, a net force of $\VAR{data.F}$ acts on the billiard ball for $\VAR{data.t_ms}$ ($\VAR{data.t}$). What is the final momentum of the ball after it is struck? Start with a fundamental principle of physics. Show your work.
+
 
 %% if ans
 

@@ -1,0 +1,57 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+An electron initially has momentum $\vec{p}_i = \VAR{data.p_i}$. 
+At time $t=0$, a constant force $\vec{F}$ is applied to the electron for $\VAR{data.dt}$. 
+At time $\VAR{data.dt}$ the momentum of the electron is $\vec{p}_f=\VAR{data.p_f}$. 
+
+Calculate the force $\vec{F}$. 
+
+Start with a fundamental princinple. Show your work.
+
+%% if ans
+
+Solution: The system is the electron. The surroundings are everything else. The momentum principle demands:
+
+\begin{eqnarray*}
+\Delta \vec{p} & = & \vec{F}_{\rm net} \cdot \Delta t \\
+\vec{p}_f - \vec{p}_i & = & \vec{F}_{\rm net} \cdot \Delta t \\
+\vec{F}_{\rm net} & = & \frac{\vec{p}_f - \vec{p}_i}{\Delta t} \\
+\vec{F}_{\rm net} & = & \frac{\VAR{data.p_f} - \VAR{data.p_i}}{\VAR{data.dt}} \\
+\vec{F}_{\rm net} & = & \VAR{data.F} 
+\end{eqnarray*}
+
+%% endif
+
+\end{flushleft}
+\end{noindent}
+\end{document}
