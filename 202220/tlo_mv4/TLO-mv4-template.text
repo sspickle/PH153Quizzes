@@ -1,0 +1,88 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+A child (mass = $\VAR{data.M}$) rides a roller-coaster and is heading along a section of the track whose radius of curvature is $\VAR{data.R}$. As she goes over the top, her speed is $\VAR{data.v}$.
+
+\vspace{11 pt}
+
+On the diagram below, draw and label the following forces. Be sure to label all forces showing the source of the force (e.g., $\vec{F}_{\rm seat \rightarrow child}$, and so on). Also be sure to draw all vectors with the tail at the point of application of the force. Also, be sure to draw the vectors with the correct relative magnitude and direction.
+
+\vspace{5 pt}
+
+TLO-3: The force of the seat on the child.
+
+\vspace{5 pt}
+
+TLO-3: The gravitational force of the earth on the child.  
+
+\vspace{5 pt}
+
+TLO-7: The direction of {\Large $\frac{d\vec{p}}{dt}$}.
+
+%% if ans
+
+\vspace*{0.1in}
+\begin{center}
+    \includegraphics[width=3in]{figs/05-092_child_rollercoaster_top-soln.png}
+\end{center}
+\vspace*{0.1in}
+
+%% else
+
+\vspace*{1in}
+\begin{center}
+    \includegraphics[width=1in]{figs/05-092_child_rollercoaster_top.png}
+\end{center}
+\vspace*{1in}
+
+%% endif
+
+TLO-5: What is the force of the seat on the child when she is at the top of this rise moving with a constant speed? Start with a fundamental principle. Show your work.
+
+\vspace{4 pt}
+
+%% if ans
+
+\begin{eqnarray*}
+    d\vec{p}/dt & = & \vec{F}_{net} = \vec{F}_{earth} + \vec{F}_{seat}\\
+    y: dp_y/dt & = & -F_g + F_s\\
+    -M v^2/R & = & -F_g + F_s\\
+    F_g & = & Mg = (\VAR{data.M})(\VAR{data.g}) = \VAR{data.Fg}\\
+    F_{net} & = & M v^2/R = (\VAR{data.M})(\VAR{data.v})^2/(\VAR{data.R}) = \VAR{data.Fnet}\\
+    F_s & = & F_g - F_{net} = (\VAR{data.Fg}) - (\VAR{data.Fnet}) = \VAR{data.Fs}
+\end{eqnarray*}
+
+%% endif
+
+\end{flushleft}
+\end{noindent}
+\end{document}

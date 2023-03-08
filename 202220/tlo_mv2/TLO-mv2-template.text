@@ -1,0 +1,90 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+Two identical springs each have length $\VAR{data.l0}$ and stiffness $\VAR{data.k}$ They are attached to a metal ball whose mass is $\VAR{data.m}$. You hold onto the ball, keeping it at rest in the position shown in the diagram. If you were not holding the ball it would hang in the position indicated by the dashed circle. The goal is to calculate the $x$ and $y$ components of the force that you exert on the ball while holding it at rest in the position shown. The distance $l_1$ is $\VAR{data.l1}$ and the distance $l_2$ is $\VAR{data.l2}$. The gravitational acceleration is $\VAR{data.g}$.
+
+%% if ans
+
+\begin{center}
+\includegraphics[height=2in]{figs/spring-ball-fbd.png}
+\end{center}
+
+%% else
+
+\begin{center}
+\includegraphics[height=2in]{figs/spring-ball.png}
+\end{center}
+
+%% endif
+
+\vspace{11 pt}
+
+TLO-3: In the space below, draw a free body diagram (FBD) showing forces acting on the ball. Be sure to label all forces showing the source of the force (e.g., $\vec{F}_{\rm spring_1 \rightarrow ball}$, and so on). Also be sure to draw all vectors with the tail at the point of application of the force. 
+
+%% if ans
+
+See diagram above for Solution
+
+%% else
+
+\vspace{2 in}
+
+%% endif
+
+TLO-2: Determine the force acting on the ball by the your hand. Start with a fundamental principle. Break the problem into $x$ and $y$ parts and solve the resulting equations for the forces exerted by your hand in these two directions.
+
+%% if ans
+
+\begin{eqnarray*}
+    \frac{d\vec{p}}{dt} &=& \vec{F}_{\rm net} = \vec{F}_h + \vec{F}_{s_1} + \vec{F}_{s_2} + \vec{F}_E\\
+    0 & = & \vec{F}_h + \vec{F}_{s_1} + \vec{F}_{s_2} + \vec{F}_E\\
+    x: 0 & = & F_{hx} + 0 - F_{s_2} + 0\\
+    y: 0 & = & F_{hy} + F_{s_1} + 0 + -mg\\
+\end{eqnarray*}
+
+Note that $F_{s_1} = k(l_1-l_0) = (\VAR{data.k})(\VAR{data.l1}-\VAR{data.l0}) = \VAR{data.Fs1}$.
+
+Also, $F_{s_2} = k(l_2-l_0) = (\VAR{data.k})(\VAR{data.l2}-\VAR{data.l0}) = \VAR{data.Fs2}$.
+
+Solving the $x$ equation you can see that $F_{hx} = F_{s_2} = \VAR{data.Fs2}$.
+
+Solving the $y$ equation you can see that $F_{hy} = mg - F_{s_1} = (\VAR{data.m})(\VAR{data.g}) -\VAR{data.Fs1} =\VAR{data.Fhy}$.
+
+%% else
+
+\vspace{2 in}
+
+%% endif
+
+\end{flushleft}
+\end{noindent}
+\end{document}

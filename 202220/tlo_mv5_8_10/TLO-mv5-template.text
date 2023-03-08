@@ -1,0 +1,71 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+A particle (mass = $\VAR{data.m}$) moving in the $x$ direction is slowed down by a constant electric force in the $-x$ direction, of unknown magnitude. In a distance of $d=\VAR{data.d}$ the particle's speed decreases from $\VAR{data.vi} = \VAR{data.vic}c$ to $\VAR{data.vf} = \VAR{data.vfc}c$. 
+
+Assume the system is only the particle, and the force is from the surroundings.
+
+TLO-8: What is the change in the energy of the system? Show your work.
+
+%% if ans
+
+The speed of this particle is quite high, close to the speed of light, so we need to use the relativistic form of the kinetic energy. The change in the kinetic energy is:
+
+\begin{eqnarray*}
+\Delta KE &=& KE_{f} - KE_{i} = (\gamma_i - \gamma_f) m c^2\\
+\gamma_i &=& \frac{1}{\sqrt{1 - (\frac{v_i}{c})^2}}=\frac{1}{\sqrt{1 - (\VAR{data.vic})^2}}=\VAR{data.gamma_i}\\
+\gamma_f &=& \frac{1}{\sqrt{1 - (\frac{v_f}{c})^2}}=\frac{1}{\sqrt{1 - (\VAR{data.vfc})^2}}=\VAR{data.gamma_f}\\
+\Delta KE &=& ((\VAR{data.gamma_f}) - (\VAR{data.gamma_i}))(\VAR{data.m})(\VAR{data.c})^2 = \VAR{data.deltake}
+\end{eqnarray*}
+
+%% else
+
+\vspace{2in}
+
+%% endif
+
+TLO-10: What is the {\it magnitude} of the electric force? Start with a fundamental princinple. Show your work.
+
+%% if ans
+
+\begin{eqnarray*}
+\Delta E &=& W_{\rm surroundings \rightarrow system}\\
+\Delta KE &=& \vec{F}_E \cdot \Delta \vec{r} = - F_E d\\
+F_E & = & |\Delta KE/d| = |(\VAR{data.deltake})/(\VAR{data.d})| = \VAR{data.FE}
+\end{eqnarray*}
+
+%% endif
+
+
+\end{flushleft}
+\end{noindent}
+\end{document}

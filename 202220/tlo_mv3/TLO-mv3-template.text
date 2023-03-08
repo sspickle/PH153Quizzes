@@ -1,0 +1,94 @@
+\documentclass[11pt, oneside]{article}
+\usepackage[margin=0.75in]{geometry}
+\geometry{letterpaper}               
+\usepackage[parfill]{parskip}
+\usepackage[strict]{changepage}
+\usepackage{graphicx}
+\pagenumbering{gobble}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\VAR{data.tlo}-\VAR{data.vnum}}
+\author{}
+
+\begin{document}
+\begin{noindent}
+\begin{flushleft}
+
+%% if ans 
+\VAR{data.tlo}-(version-\VAR{data.vnum}) Solution.
+
+\vspace{0 pt}
+
+%% else
+
+\VAR{data.tlo}-(version-\VAR{data.vnum}) \hfill  Name $\rule{4cm}{0.15mm}$
+
+\hfill  Date $\rule{4cm}{0.15mm}$
+
+%% endif
+
+An automobile (and its occupants) of total mass $M = \VAR{data.M}$, is moving through a curved dip in the road of radius $R=\VAR{data.R}$ at a constant speed $v=\VAR{data.v}$. For this analysis, you can neglect air resistance.
+
+\vspace{4 pt}
+
+\textbf{Consider the automobile (and its occupants) as the system of interest.}
+
+%% if ans
+
+\vspace*{0.1in}
+\begin{center}
+    \includegraphics[width=3in]{figs/05-090_car_on_hill_soln.png}
+\end{center}
+\vspace*{0.1in}
+
+%% else
+
+\vspace*{1in}
+\begin{center}
+    \includegraphics[width=3in]{figs/05-090_car_on_hill.png}
+\end{center}
+\vspace*{1in}
+
+%% endif
+
+TLO-3: At the instant the automobile is at the bottom of the dip, draw an arrow to represent the gravitational force on the system. \textbf{\textit{Label this arrow}} $\vec{F}_{g}$.
+
+\vspace{8 pt}
+
+TLO-3: At the instant the automobile is at the bottom of the dip, draw an arrow to represent the force of the road on the system. \textbf{\textit{Label this arrow}} $\vec{F}_{r}$.
+
+\vspace{8 pt}
+
+\textbf{\textit{Try to make the lengths of the force vectors be proportional to the magnitudes of the forces.}}
+
+\vspace{8 pt}
+
+TLO-7: At the instant the car is at the bottom of the dip, draw an arrow to represent the net force on the system. \textbf{\textit{Label this arrow}} $\vec{F}_{net}$.
+
+\vspace{8 pt}
+
+TLO-5: Calculate the force exerted by the road on the system (car and its occupants). \textbf{\textit{Start from the derivative form of the momentum principle and show all your work}}.
+
+%% if ans
+
+\begin{eqnarray*}
+    d\vec{p}/dt & = & \vec{F}_{net} = \vec{F}_{g} + vec{F}_{r}\\
+    y: dp_y/dt & = & -F_g + F_r\\
+    +M v^2/R & = & -F_g + F_r\\
+    F_g & = & Mg = (\VAR{data.M})(\VAR{data.g}) = \VAR{data.Fg}\\
+    F_{net} & = & M v^2/R = (\VAR{data.M})(\VAR{data.v})^2/(\VAR{data.R}) = \VAR{data.Fnet}\\
+    F_r & = & F_g + F_{net} = (\VAR{data.Fg}) + (\VAR{data.Fnet}) = \VAR{data.Fr}
+\end{eqnarray*}
+
+%% else
+\vspace*{2.5in}
+%% endif
+
+(Now that you have computed $F_r = |\vec{F}_r|$, if necessary correct the lengths of the arrows in your free body diagram.) 
+
+\end{flushleft}
+\end{noindent}
+\end{document}
